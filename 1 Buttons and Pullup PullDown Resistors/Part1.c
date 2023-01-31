@@ -33,9 +33,16 @@ int main(void)
     while(1)
     {
         if (P2IN & BIT3)            // If S2 (P2.3) is pressed
+            P6OUT &= ~BIT6;
+
+        else
             P6OUT ^= BIT6;          // Toggle P6.6
-        if (P4IN & BIT1)            // If S1 (P4.1) is pressed
-            P1OUT ^= BIT0;          // Toggle P1.0
+
+        if (P4IN & BIT1)           // If S1 (P4.1) is pressed
+            P1OUT &= ~BIT0;          // Toggle P1.0
+
+        else
+            P1OUT ^= BIT0;          // Toggle P6.6
         __delay_cycles(100000);             // Delay for 100000*(1/MCLK)=0.1s
     }
 
