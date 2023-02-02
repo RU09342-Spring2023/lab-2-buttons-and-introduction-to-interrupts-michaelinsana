@@ -77,3 +77,12 @@ Then load up Energy Trace and perform the similar capture of Power with the LED 
 
 # Screenshots and Answers to Questions
 **Replace this section with your screenshots of Energy Trace and provide some reasoning as to Questions 1 and 2 in the Power consumption of the Interrupts Section.**
+
+![Polling](https://user-images.githubusercontent.com/122934621/216372750-29b97209-70d6-4228-b706-78388ee2a351.PNG)
+
+![WithInterrupts](https://user-images.githubusercontent.com/122934621/216372835-5f6db258-0384-42b9-a77b-644c0816f51a.PNG)
+
+
+1. The CPU constantly running and checking for a button press is what is causing the baseline to be higher.
+2. There are still power increases when the button is pressed because the CPU is still running and drawing power.
+
